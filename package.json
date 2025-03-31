@@ -1,0 +1,20 @@
+{
+  "name": "r4s",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "e2e:headed": "npx playwright test --headed",
+    "e2e:headless": "npx playwright test",
+    "e2e:update-snapshots": "npx playwright test tests/web-automation/ -u"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.13.14",
+    "ajv": "^8.17.1",
+    "crypto-random-string": "^5.0.0"
+  }
+}
