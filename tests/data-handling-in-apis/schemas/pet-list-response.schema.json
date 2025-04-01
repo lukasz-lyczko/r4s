@@ -1,0 +1,71 @@
+{
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/SinglePet"
+  },
+  "definitions": {
+    "SinglePet": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "category": {
+          "$ref": "#/definitions/Category"
+        },
+        "name": {
+          "type": "string"
+        },
+        "photoUrls": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Category"
+          }
+        },
+        "status": {
+          "$ref": "#/definitions/Status"
+        }
+      },
+      "required": [
+        "id",
+        "photoUrls",
+        "status",
+        "tags"
+      ],
+      "title": "SinglePet"
+    },
+    "Category": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ],
+      "title": "Category"
+    },
+    "Status": {
+      "type": "string",
+      "enum": [
+        "sold",
+        "pending",
+        "available"
+      ],
+      "title": "Status"
+    }
+  }
+}

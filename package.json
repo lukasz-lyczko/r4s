@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "e2e:headed": "npx playwright test --headed",
-    "e2e:headless": "npx playwright test",
-    "e2e:update-snapshots": "npx playwright test tests/web-automation/ -u"
+    "e2e:headless": "npx playwright test --repeat-each=10",
+    "e2e:update-snapshots": "npx playwright test tests/web-automation/ -u --headed"
   },
   "keywords": [],
   "author": "",
